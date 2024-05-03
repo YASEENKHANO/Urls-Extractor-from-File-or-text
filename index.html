@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>URL Extractor</title>
+
+    <!---Link to script--->
+    <link rel="stylesheet" href="script.js">
+    <!---link to style--->
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <h1>URL Extractor</h1>
+    <!--Div where a file is dropped--->
+    <div id="dropZone" class="drop-zone" ondrop="extractURLsOnDrop()">Drop text files here</div>
+
+<!---Area where your file text or pasted text is shown---->
+    <textarea id="textInput" placeholder="Paste your text containing URLs here..."></textarea>
+
+    <!---This button will extract the urls--->
+    <button onclick="extractURLs()">Extract URLs</button>
+
+
+    <button onclick="copyURLs()">Copy URLs</button>
+    
+    <!---to save the urls to a file-->
+    <button onclick="saveToFile()">Save URLs to File</button>
+    <input type="text" id="fileNameInput" placeholder="Enter file name (without extension)">
+    <select id="fileFormat">
+        <option value="txt">Text</option>
+        <option value="csv">CSV</option>
+        <option value="xls">XLS</option>
+    </select>
+    
+    
+    <!---extracted urls in list-->
+    <div id="urlList"></div><br>
+   <div><h5>By YaseenKhan0</h5></div>
+  <script src="script.js"></script>
+</body>
+</html>
